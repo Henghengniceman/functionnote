@@ -6,7 +6,7 @@ Created on Mon Oct  5 17:12:18 2020
 
 E-Mail: hengheng.zhang@kit.edu
 
-Function：
+Function： define function 
 
 """
 def cheeseshop(kind, *arguments, **keywords):
@@ -30,4 +30,6 @@ def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
         |        Positional or keyword   |
         |                                - Keyword only
          -- Positional only
+def concat(*args, sep="/"):
+         return sep.join(args)
 """
