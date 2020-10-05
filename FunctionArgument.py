@@ -9,6 +9,7 @@ E-Mail: hengheng.zhang@kit.edu
 Function： define function 
 
 """
+from math import pi
 def cheeseshop(kind, *arguments, **keywords):
     print("-- Do you have any", kind, "?")
     print("-- I'm sorry, we're all out of", kind)
@@ -33,3 +34,16 @@ def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
 def concat(*args, sep="/"):
          return sep.join(args)
 """
+squares = list(map(lambda x: x**2, range(10)))
+# equal 
+squares = [x**2 for x in range(10)]
+## 
+[(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+## round can be used to show Decimal
+[str(round(pi, i)) for i in range(1, 6)]
+
+
+
+
+
+
