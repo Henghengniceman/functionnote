@@ -6,7 +6,7 @@ Created on Tue Oct  6 18:59:47 2020
 
 E-Mail: hengheng.zhang@kit.edu
 
-Function：
+Function： Science Plot
 
 """
 import numpy as np 
@@ -34,7 +34,7 @@ with plt.style.context(['science','no-latex']):
 #%% IEEE
 with plt.style.context(['ieee','no-latex']):
     fig, ax = plt.subplots(figsize=(4,3),dpi=200)
-    for p in [10, 20, 50]:
+    for p in [10, 15, 20, 30, 50, 100]:
         ax.plot(x, model(x, p), label=p)
     ax.legend(title='Order')
     ax.set(xlabel='Voltage (mV)')
