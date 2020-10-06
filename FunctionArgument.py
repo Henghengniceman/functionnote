@@ -46,7 +46,21 @@ questions = ['name', 'quest', 'favorite color']
 answers = ['lancelot', 'the holy grail', 'blue']
 for q, a in zip(questions, answers):
      print('What is your {0}?  It is {1}.'.format(q, a))
-
+     
+with open('workfile') as f:
+         read_data = f.read()
+f.closed
+#%% error and exception 
+while True:
+     try:
+         x = int(input("Please enter a number: "))
+         break
+     except ValueError:
+         print("Oops!  That was no valid number.  Try again...")
+#%% string template
+from string import Template
+t = Template('${village}folk send $$10 to $cause.')
+t.substitute(village='Nottingham', cause='the ditch fund')
 
 
 
