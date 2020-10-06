@@ -41,7 +41,11 @@ squares = [x**2 for x in range(10)]
 [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
 ## round can be used to show Decimal
 [str(round(pi, i)) for i in range(1, 6)]
-
+#%% zip list
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+     print('What is your {0}?  It is {1}.'.format(q, a))
 
 
 
