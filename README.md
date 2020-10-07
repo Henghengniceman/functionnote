@@ -1,5 +1,4 @@
 # functionnote
-write some function often use
 =============
 *1.FunctionArgumen:* 
 >the way to define a funcction
