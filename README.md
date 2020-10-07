@@ -1,6 +1,5 @@
 # functionnote
 
-=============
 
 *1.FunctionArgumen:* 
 
