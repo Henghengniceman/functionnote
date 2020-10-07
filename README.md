@@ -1,6 +1,9 @@
 # functionnote
+
 =============
+
 *1.FunctionArgumen:* 
+
 >the way to define a funcction
 
 >function arguments/keyword
