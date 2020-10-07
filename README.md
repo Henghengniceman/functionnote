@@ -10,5 +10,7 @@ write some function often use
    
 >error and exception 
  
-*1.LaLambda Expressions* 
+*2.LaLambda Expressions* 
 > define how to use Lambda Expressions
+*3.Science Plot* 
+> Science Plot
