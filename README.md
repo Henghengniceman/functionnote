@@ -2,11 +2,11 @@
 write some function often use
 =============
 *1.FunctionArgumen： 
-the way to define a funcction*
+>the way to define a funcction*
 
-function arguments/keyword
+>function arguments/keyword
    
-zip used in for sentence 
+>zip used in for sentence 
    
-error and exception 
+>error and exception 
   
