@@ -9,12 +9,11 @@ E-Mail: hengheng.zhang@kit.edu
 Function：
 
 """
-import netCDF4 as nc
-import numpy as np
+import numpy
+from netCDF4 import Dataset
+f = Dataset("complex.nc","w")
 
-FileDataSet=nc.Dataset('../result/test2.nc')
-# print(FileDataSet)
-all_vars = FileDataSet.variables.keys()  
-print(all_vars)
-temp = np.array(FileDataSet['temp'][:])   # read lon
-temp1=temp[0,0,:,:]
+size = 3
+datac = numpy.exp(1j*(1.+numpy.linspace(0, numpy.pi, size)))
+complex128 = numpy.dtype([("real",numpy.float64),("imag",numpy.float64)])
+omplex128_t = f.createCompoundType(complex128,"complex128")

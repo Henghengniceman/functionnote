@@ -13,10 +13,13 @@ Function：Netcdf 4 tutorial
 from  netCDF4 import Dataset
 import time
 import numpy
+from datetime import datetime, timedelta
+from netCDF4 import num2date, date2num
+Path='../result/test3.nc'
 
-rootgrp = Dataset('../result/test2.nc','w',format='NETCDF4')
+rootgrp = Dataset(Path,'w',format='NETCDF4')
 # print(rootgrp)
-rootgrp =Dataset('../result/test2.nc','a')
+rootgrp =Dataset(Path,'a')
 fcstgrp = rootgrp.createGroup('forecasts')
 analgrp = rootgrp.createGroup('analyses')
 # print(rootgrp.groups)
@@ -71,6 +74,9 @@ nlons = len(rootgrp.dimensions["lon"])
 from numpy.random import uniform
 temp[0:5, 0:10, :, :] = uniform(size=(5, 10, nlats, nlons))
 levels[:] =  [1000.,850.,700.,500.,300.,250.,200.,150.,100.,50.]
+
+dates = [datetime(2001,3,1)+n*timedelta(hours=12) for n in range(temp.shape[0])]
+times[:] = date2num(dates,units=times.units,calendar=times.calendar)
 # from numpy.random import uniform
 # temp[0:5, 0:10, :, :] = uniform(size=(5, 10, nlats, nlons))
 # # append along two unlimited dimensions by assigning to slice.
